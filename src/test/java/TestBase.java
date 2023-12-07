@@ -1,11 +1,12 @@
 
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.logevents.SelenideLogger;
-import drivers.AndroidDriver;
+import drivers.WebDriver;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
+import owner.WebDriverConfig;
 
 import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
@@ -13,7 +14,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class TestBase {
     @BeforeAll
     static void beforeAll() {
-        Configuration.browser = AndroidDriver.class.getName();
+        Configuration.browser = WebDriver.class.getName();
         Configuration.browserSize = null;
         Configuration.timeout = 30000;
     }
