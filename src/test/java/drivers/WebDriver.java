@@ -19,7 +19,7 @@ public class WebDriver implements WebDriverProvider {
         MutableCapabilities caps = new MutableCapabilities();
         caps.setCapability("browserstack.user", config.getUserName());
         caps.setCapability("browserstack.key", config.getAccessKey());
-        caps.setCapability("app", "bs://c700ce60cf13ae8ed97705a55b8e022f13c5827c");
+        caps.setCapability("app", config.getApp());
         caps.setCapability("device", config.getDevice());
         caps.setCapability("os_version", config.getOS());
         caps.setCapability("project", "First Java Project");
