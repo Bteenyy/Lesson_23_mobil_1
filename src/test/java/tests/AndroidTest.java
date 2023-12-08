@@ -25,7 +25,7 @@ public class AndroidTest extends TestBase {
 
     @Test
     @Tag("android")
-    void articleOpen() {
+    void articleOpenTest() {
         step("Type search", () -> {
         $(accessibilityId("Search Wikipedia")).click();
         $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
