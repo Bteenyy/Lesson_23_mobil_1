@@ -16,26 +16,26 @@ public class AndroidTest extends TestBase {
     @Tag("android")
     void searchTest() {
         step("Type search", () -> {
-        $(accessibilityId("Search Wikipedia")).click();
-        $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+            $(accessibilityId("Search Wikipedia")).click();
+            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
         step("Verify content found", () ->
-        $$(id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0)));
+                $$(id("org.wikipedia.alpha:id/page_list_item_title")).shouldHave(sizeGreaterThan(0)));
     }
 
     @Test
     @Tag("android")
     void articleOpenTest() {
         step("Type search", () -> {
-        $(accessibilityId("Search Wikipedia")).click();
-        $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
+            $(accessibilityId("Search Wikipedia")).click();
+            $(id("org.wikipedia.alpha:id/search_src_text")).sendKeys("Appium");
         });
         step("Open article", () -> {
-        $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
+            $(id("org.wikipedia.alpha:id/page_list_item_title")).click();
         });
         step("Check result", () -> {
-        $(id("org.wikipedia.alpha:id/view_wiki_error_text")).shouldHave(text("An error occurred"));
-        $(id("org.wikipedia.alpha:id/view_wiki_error_button")).shouldHave(text("GO BACK"));
+            $(id("org.wikipedia.alpha:id/view_wiki_error_text")).shouldHave(text("An error occurred"));
+            $(id("org.wikipedia.alpha:id/view_wiki_error_button")).shouldHave(text("GO BACK"));
         });
     }
 }

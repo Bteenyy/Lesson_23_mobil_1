@@ -13,6 +13,7 @@ import java.net.URL;
 
 public class WebDriver implements WebDriverProvider {
     static WebDriverConfig config = ConfigFactory.create(WebDriverConfig.class, System.getProperties());
+
     @Nonnull
     @Override
     public org.openqa.selenium.WebDriver createDriver(@Nonnull Capabilities capabilities) {

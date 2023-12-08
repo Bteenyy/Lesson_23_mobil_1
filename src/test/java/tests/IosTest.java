@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static io.appium.java_client.AppiumBy.name;
 import static io.qameta.allure.Allure.step;
 
-public class IosTest extends TestBase{
+public class IosTest extends TestBase {
     @Test
     @Tag("ios")
     void visibleMainPageTest() {

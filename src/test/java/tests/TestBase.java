@@ -26,10 +26,10 @@ public class TestBase {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
         open();
     }
+
     @AfterEach
     void addAttachments() {
         String sessionId = Selenide.sessionId().toString();
-        Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
         Attach.addVideo(sessionId);
         closeWebDriver();
