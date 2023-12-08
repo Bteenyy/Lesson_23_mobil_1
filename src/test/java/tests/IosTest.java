@@ -1,10 +1,8 @@
 package tests;
 
-import com.codeborne.selenide.Condition;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 
-import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.$;
 import static io.appium.java_client.AppiumBy.name;
@@ -13,7 +11,7 @@ import static io.qameta.allure.Allure.step;
 public class IosTest extends TestBase{
     @Test
     @Tag("ios")
-    void verifyMainPageElementsExistingTest() {
+    void visibleMainPageTest() {
         step("Check main page", () -> {
             $(name("Sample iOS")).shouldBe(visible);
             $(name("UI Elements")).shouldBe(visible);
